@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1><center> {{ data }} </center></h1>
+
+<div id="container">
+	<div id="stol">
+		<div>
+			<center><img src="static/image/b.jpg" style="border-radius: 50%; border: 1px solid blue; padding: 5px; width: 25%; margin:5px;"></center>
+			<div id="licytacja"><center><b>100</b></center></div>
+		</div>
+	</div>
+	<div id="musik">
+		<div>
+			<div id="card_mus">
+				<img src="static/image/tyl.jpg" style="display:none">
+				<img src="static/image/{{data.musik[0][0].name}}_{{data.musik[0][0].color}}.jpg" style="//display:none">
+			</div>
+			<div id="card_mus">
+				<img src="static/image/tyl.jpg" style="display:none">
+				<img src="static/image/{{data.musik[0][1].name}}_{{data.musik[0][1].color}}.jpg" style="//display:none">
+			</div>
+			<div id="card_mus">
+				<img src="static/image/tyl.jpg" style="display:none">
+				<img src="static/image/{{data.musik[0][2].name}}_{{data.musik[0][2].color}}.jpg" style="//display:none">
+			</div>
+			<div id="clear"></div>
+		</div>
+	</div>
+	<div id="players">
+		<div id="name_player">
+			<div style="float:left"> 
+				{{ data.players[0].name }} 
+			</div>
+			<div style="float:right"> 
+				#{{ data.players[0].ID+1 }} 
+			</div>
+		</div>
+		<div id="cards">
+			<div id="card">
+				<img src="static/image/{{data.players[0].tactic.cards[0].name}}_{{data.players[0].tactic.cards[0].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[0].tactic.cards[1].name}}_{{data.players[0].tactic.cards[1].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[0].tactic.cards[2].name}}_{{data.players[0].tactic.cards[2].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[0].tactic.cards[3].name}}_{{data.players[0].tactic.cards[3].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[0].tactic.cards[4].name}}_{{data.players[0].tactic.cards[4].color}}.jpg">
+			</div>
+			<div id="clear"></div>
+		</div>
+	</div>
+	<div id="players">
+		<div id="name_player">
+			<div style="float:left"> 
+				{{ data.players[1].name }} 
+			</div>
+			<div style="float:right"> 
+				#{{ data.players[1].ID+1 }} 
+			</div>
+		</div>
+		<div id="cards">
+			<div id="card">
+				<img src="static/image/{{data.players[1].tactic.cards[0].name}}_{{data.players[1].tactic.cards[0].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[1].tactic.cards[1].name}}_{{data.players[1].tactic.cards[1].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[1].tactic.cards[2].name}}_{{data.players[1].tactic.cards[2].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[1].tactic.cards[3].name}}_{{data.players[1].tactic.cards[3].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[1].tactic.cards[4].name}}_{{data.players[1].tactic.cards[4].color}}.jpg">
+			</div>
+			<div id="clear"></div>
+		</div>
+	</div>
+	<div id="clear"></div>
+	<div id="players">
+		<div id="name_player">
+			<div style="float:left"> 
+				{{ data.players[2].name }} 
+			</div>
+			<div style="float:right"> 
+				#{{ data.players[2].ID+1 }} 
+			</div>
+		</div>
+		<div id="cards">
+			<div id="card">
+				<img src="static/image/{{data.players[2].tactic.cards[0].name}}_{{data.players[2].tactic.cards[0].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[2].tactic.cards[1].name}}_{{data.players[2].tactic.cards[1].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[2].tactic.cards[2].name}}_{{data.players[2].tactic.cards[2].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[2].tactic.cards[3].name}}_{{data.players[2].tactic.cards[3].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[2].tactic.cards[4].name}}_{{data.players[2].tactic.cards[4].color}}.jpg">
+			</div>
+			<div id="clear"></div>
+		</div>
+			<div id="clear"></div>
+	</div>
+	<div id="players">
+		<div id="name_player">
+			<div style="float:left"> 
+				{{ data.players[3].name }} 
+			</div>
+			<div style="float:right"> 
+				#{{ data.players[3].ID+1 }} 
+			</div>
+		</div>
+		<div id="cards">
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[0].name}}_{{data.players[3].tactic.cards[0].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[1].name}}_{{data.players[3].tactic.cards[1].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[2].name}}_{{data.players[3].tactic.cards[2].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[3].name}}_{{data.players[3].tactic.cards[3].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[4].name}}_{{data.players[3].tactic.cards[4].color}}.jpg">
+			</div>
+			<div id="clear"></div>
+		</div>
+	</div>
+</div>	
+{% endblock %}
+

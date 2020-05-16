@@ -1,0 +1,82 @@
+body {
+	background-color: #000000;
+}
+
+/* img { */
+  /* border-radius: 50%; */
+  /* border: 1px solid blue; */
+  /* padding: 5px; */
+  /* width: 25%; */
+  /* margin:5px; */
+/* } */
+
+img{
+	border: 1px solid black;
+}
+
+#container{
+	margin-left:auto;
+	margin-right:auto;
+	background: #354f5d; 
+	height: 500px; 
+	width: 65%;
+}
+
+#players {
+	border: 1px dotted black;
+	float: left;
+	height: 49.7%;
+	width: 49.7%;
+}
+
+#clear {
+	clear: both;
+}
+
+#name_player {
+	border: 1px dotted black;
+	padding: 10px;
+	background-color: #7FFFD4;
+	height: 7%;
+}
+
+#card{
+	float:left;
+	width:6%;
+}
+
+#card_mus{
+	float:left;
+	width:20%;
+}
+
+#cards{
+	margin:4%;
+	margin-left: 25%;
+}
+
+#stol{
+	position:absolute;
+	left:90px;
+	top:80px;
+	color:red;
+	border: 1px dotted red;
+	height: 18%; 
+	width: 10%;
+}
+
+#musik{
+	position:absolute;
+	left:90px;
+	top:250px;
+	/* border: 1px dotted red; */
+	height: 18%; 
+	width: 10%;
+	/* display:none; */
+}
+
+#licytacja {
+	border: 1px dotted black;
+	color: white;
+	margin:3px;
+}

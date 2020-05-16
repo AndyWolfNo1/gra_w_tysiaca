@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+	<title>{{the_title}}</title>
+	<link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+	<ul id="navigation" style="color:blue">
+	  {% for item in navigation %}
+		  <li><a style="color:red" href="{{ item.href }}">{{ item.caption }}</a></li>
+	  {% endfor %}
+	</ul>
+	{% block body %}
+	
+	{% endblock %}
+</body>
+</html>

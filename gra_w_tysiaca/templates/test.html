@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div style="float:left; margin-top:50px; margin-left:50px; ">
+<style> td { border: 1px solid blue; padding:10px; } tr { color:white; } </style>
+<table>
+	<tr>
+	  <td style="font-size:1.3em; color:red;">Gracz</td>  <td style="font-size:1.3em; color:red;">point_t</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[0].name}}</td>  <td>{{data.players[0].tactic.point_t}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[1].name}}</td>  <td>{{data.players[1].tactic.point_t}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[2].name}}</td>  <td>{{data.players[2].tactic.point_t}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[3].name}}</td>  <td>{{data.players[3].tactic.point_t}}</td>
+   </tr>
+</table>
+<br>
+<table>
+	<tr>
+	  <td style="font-size:1.3em; color:red;">Gracz</td>  <td style="font-size:1.3em; color:red;">Colors</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[0].name}}</td>  <td>{{data.players[0].tactic.colors}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[1].name}}</td>  <td>{{data.players[1].tactic.colors}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[2].name}}</td>  <td>{{data.players[2].tactic.colors}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[3].name}}</td>  <td>{{data.players[3].tactic.colors}}</td>
+   </tr>
+</table>
+<br>
+<table>
+	<tr>
+	  <td style="font-size:1.3em; color:red;">Gracz</td>  <td style="font-size:1.3em; color:red;">master_t</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[0].name}}</td>  <td>{{data.players[0].tactic.master}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[1].name}}</td>  <td>{{data.players[1].tactic.master}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[2].name}}</td>  <td>{{data.players[2].tactic.master}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[3].name}}</td>  <td>{{data.players[3].tactic.master}}</td>
+   </tr>
+</table>
+<br>
+<table>
+	<tr>
+	  <td style="font-size:1.3em; color:red;">Gracz</td>  <td style="font-size:1.3em; color:red;">hand</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[0].name}}</td>  <td>{{data.players[0].tactic.hand}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[1].name}}</td>  <td>{{data.players[1].tactic.hand}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[2].name}}</td>  <td>{{data.players[2].tactic.hand}}</td>
+   </tr>
+   <tr>
+	  <td>{{data.players[3].name}}</td>  <td>{{data.players[3].tactic.hand}}</td>
+   </tr>
+</table>
+<br>
+<br>
+
+	
+</div>
+<div style="width: 500px; height:500px; margin-top:50px; float:left; margin-left:50px">
+	<div>
+		<img src="static/image/{{data.players[0].tactic.show_handd[0].name}}_{{data.players[0].tactic.show_handd[0].color}}.jpg">
+		<img src="static/image/{{data.players[0].tactic.show_handd[1].name}}_{{data.players[0].tactic.show_handd[1].color}}.jpg">
+		<img src="static/image/{{data.players[0].tactic.show_handd[2].name}}_{{data.players[0].tactic.show_handd[2].color}}.jpg">
+		<img src="static/image/{{data.players[0].tactic.show_handd[3].name}}_{{data.players[0].tactic.show_handd[3].color}}.jpg">
+		<img src="static/image/{{data.players[0].tactic.show_handd[4].name}}_{{data.players[0].tactic.show_handd[4].color}}.jpg">
+		<img src="static/image/{{data.players[1].tactic.show_handd[0].name}}_{{data.players[1].tactic.show_handd[0].color}}.jpg">
+		<img src="static/image/{{data.players[1].tactic.show_handd[1].name}}_{{data.players[1].tactic.show_handd[1].color}}.jpg">
+		<img src="static/image/{{data.players[1].tactic.show_handd[2].name}}_{{data.players[1].tactic.show_handd[2].color}}.jpg">
+		<img src="static/image/{{data.players[1].tactic.show_handd[3].name}}_{{data.players[1].tactic.show_handd[3].color}}.jpg">
+		<img src="static/image/{{data.players[1].tactic.show_handd[4].name}}_{{data.players[1].tactic.show_handd[4].color}}.jpg">
+		<img src="static/image/{{data.players[2].tactic.show_handd[0].name}}_{{data.players[2].tactic.show_handd[0].color}}.jpg">
+		<img src="static/image/{{data.players[2].tactic.show_handd[1].name}}_{{data.players[2].tactic.show_handd[1].color}}.jpg">
+		<img src="static/image/{{data.players[2].tactic.show_handd[2].name}}_{{data.players[2].tactic.show_handd[2].color}}.jpg">
+		<img src="static/image/{{data.players[2].tactic.show_handd[3].name}}_{{data.players[2].tactic.show_handd[3].color}}.jpg">
+		<img src="static/image/{{data.players[2].tactic.show_handd[4].name}}_{{data.players[2].tactic.show_handd[4].color}}.jpg">
+		<img src="static/image/{{data.players[3].tactic.show_handd[0].name}}_{{data.players[3].tactic.show_handd[0].color}}.jpg">
+		<img src="static/image/{{data.players[3].tactic.show_handd[1].name}}_{{data.players[3].tactic.show_handd[1].color}}.jpg">
+		<img src="static/image/{{data.players[3].tactic.show_handd[2].name}}_{{data.players[3].tactic.show_handd[2].color}}.jpg">
+		<img src="static/image/{{data.players[3].tactic.show_handd[3].name}}_{{data.players[3].tactic.show_handd[3].color}}.jpg">
+		<img src="static/image/{{data.players[3].tactic.show_handd[4].name}}_{{data.players[3].tactic.show_handd[4].color}}.jpg">
+		<img src="static/image/{{data.musik[0][0].name}}_{{data.musik[0][0].color}}.jpg">
+		<img src="static/image/{{data.musik[0][1].name}}_{{data.musik[0][1].color}}.jpg">
+		<img src="static/image/{{data.musik[0][2].name}}_{{data.musik[0][2].color}}.jpg">
+		<img src="static/image/{{data.musik[0][3].name}}_{{data.musik[0][3].color}}.jpg">
+	</div>
+	<div id="clear"></div>
+</div>
+<div style="float:left; margin-top:80px;"> 
+	<form acttion="/test" method="POST">
+		<input type="submit" name="submit_button" value="Do Something">
+		<!-- <input type="submit" name="download" value="Download"> -->
+	</form>
+</div>
+<div style="float:left; margin-top:80px; color:red;"> 
+	{{ data2 }} 
+</div>
+	<div id="clear"></div>
+	
+
+{% endblock %}
