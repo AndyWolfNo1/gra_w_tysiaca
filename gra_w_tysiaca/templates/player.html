@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1><center> {{ data }} </center></h1>
+
+<div id="container">
+	<div id="licit">
+		<div>
+			<center><img src="static/image/b.jpg" style="border-radius: 50%; border: 1px solid blue; padding: 5px; width: 25%; margin:5px;"></center>
+			<div id="licytacja"><center><b>100</b></center></div>
+		</div>
+	</div>
+	<div id="musik">
+		<div>
+			<div id="card_mus">
+				<img src="static/image/tyl.jpg" style="display://none">
+				<!-- <img src="static/image/{{data.musik[0][0].name}}_{{data.musik[0][0].color}}.jpg" style="isplay:none"> -->
+			</div>
+			<div id="card_mus">
+				<img src="static/image/tyl.jpg" style="//display:none">
+			</div>
+			<div id="card_mus">
+				<img src="static/image/tyl.jpg" style="//display:none">
+			</div>
+			<div id="card_mus">
+				<img src="static/image/tyl.jpg" style="//display:none">
+			</div>
+			<div id="clear"></div>
+		</div>
+	</div>
+<div id="table">	
+	<div id="players">
+		<div id="name_player">
+			<div style="float:left"> 
+				{{ data.players[0].name }} 
+			</div>
+			<div style="float:right"> 
+				Krzesło 1 
+			</div>
+		</div>
+		<div id="cards">
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="clear"></div>
+		</div>
+	</div>
+	<div id="players">
+		<div id="name_player">
+			<div style="float:left"> 
+				{{ data.players[1].name }} 
+			</div>
+			<div style="float:right"> 
+				Krzesło 2
+			</div>
+		</div>
+		<div id="cards">
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="clear"></div>
+		</div>
+	</div>
+	<div id="clear"></div>
+	<div id="blat">
+		<div id="card_blat" style="box-shadow: 0px 0px 5px 3px rgba(12,237,5,1);">
+			<img src="static/image/tyl.jpg">
+		</div>
+		<div id="card_blat">
+			<img src="static/image/tyl.jpg">
+		</div>
+		<br>
+		<div id="card_blat">
+			<img src="static/image/tyl.jpg">
+		</div>
+		<div id="card_blat">
+			<img src="static/image/tyl.jpg">
+		</div>
+	</div>
+	<div id="players">
+		<div id="name_player">
+			<div style="float:left"> 
+				{{ data.players[2].name }} 
+			</div>
+			<div style="float:right"> 
+				Krzesło 3
+			</div>
+		</div>
+		<div id="cards">
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/tyl.jpg">
+			</div>
+			<div id="clear"></div>
+		</div>
+	</div>
+	<div id="players">
+		<div id="name_player">
+			<div style="float:left"> 
+				{{ data.players[3].name }} 
+			</div>
+			<div style="float:right"> 
+				Krzesło 4 
+			</div>
+		</div>
+		<div id="cards">
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[0].name}}_{{data.players[3].tactic.cards[0].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[1].name}}_{{data.players[3].tactic.cards[1].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[2].name}}_{{data.players[3].tactic.cards[2].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[3].name}}_{{data.players[3].tactic.cards[3].color}}.jpg">
+			</div>
+			<div id="card">
+				<img src="static/image/{{data.players[3].tactic.cards[4].name}}_{{data.players[3].tactic.cards[4].color}}.jpg">
+			</div>
+			<div id="clear"></div>
+		</div>
+	</div>
+</div>
+</div>	
+{% endblock %}
+

@@ -5,13 +5,17 @@
 	<link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
-	<ul id="navigation" style="color:blue">
-	  {% for item in navigation %}
-		  <li><a style="color:red" href="{{ item.href }}">{{ item.caption }}</a></li>
-	  {% endfor %}
-	</ul>
+	<div id="menu">
+		<ul id="navigation" style="color:blue">
+		  {% for item in navigation %}
+			  <li><a style="color:red" href="{{ item.href }}">{{ item.caption }}</a></li>
+		  {% endfor %}
+		  <li><a href="{{url_for('test')}}">Przykład</a></li>
+		</ul>
+	</div>
 	{% block body %}
-	
 	{% endblock %}
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </body>
 </html>
+
