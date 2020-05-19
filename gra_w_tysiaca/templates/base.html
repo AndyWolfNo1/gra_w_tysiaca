@@ -1,16 +1,22 @@
 <!doctype html>
 <html>
 <head>
-	<title>{{the_title}}</title>
+	<title>Gra w tysiąca na krzyż</title>
 	<link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
+{% if 'username' in session: %}
+<div id="user_log">
+		<li style="font-size:1.2em;">{{session['username']}}</li>
+		<a href="{{url_for('logout')}}" style="color:red;">Wyloguj się</a>
+</div>
+
+{% endif %}
 	<div id="menu">
 		<ul id="navigation" style="color:blue">
 		  {% for item in navigation %}
 			  <li><a style="color:red" href="{{ item.href }}">{{ item.caption }}</a></li>
 		  {% endfor %}
-		  <li><a href="{{url_for('test')}}">Przykład</a></li>
 		</ul>
 	</div>
 	{% block body %}

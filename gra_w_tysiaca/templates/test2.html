@@ -1,14 +1,5 @@
-{% extends 'base.html' %}
+{% for i in gracze_ogolem: %}
+<p>Imię:{{ i[1] }}</p><p> Krzesło:{{ i[2] }} <p><br>
+{% endfor %}
 
-{% block body %}
-<div style="color:red;">
-	<table border = 1>  
-			 {% for key, value in result.items() %}  
-				<tr>  
-				   <th> {{ key }} </th>  
-				   <td> {{ value }} </td>  
-				</tr>  
-			 {% endfor %}  
-	</table>  
-</div>
-{% endblock %}
+{{gracze_ogolem}}

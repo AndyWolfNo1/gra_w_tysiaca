@@ -26,20 +26,48 @@ img {
 #container {
 	margin-left:auto;
 	margin-right:auto;
-	background:#354f5d; 
-	height:850px; 
+	background:#DCDCDC; 
+	height:950px; 
 	width:65%;
 }
 
-#players {
+.players {
 	border:1px dotted black;
 	float:left;
-	height:33.3%;
-	width:49.7%;
+	height:30%;
+	width:48%;
+	margin:1px;
+	margin-left:5px;
+}
+
+#chair1 {
+	background:#87CEFA;
+}
+
+#chair2 {
+	background:#7CFC00;
+}
+
+#chair3 {
+	background:#7CFC00;
+}
+
+#chair4 {
+	background:#87CEFA;
 }
 
 #clear {
 	clear:both;
+}
+
+#dane_gracza {
+	float:right;
+	margin:20px;
+	color:black;
+	border:1px solid black;
+	background:#5F9EA0;
+	padding:10px;
+	width:22%;
 }
 
 #table {
@@ -50,6 +78,14 @@ img {
 	height:98.2%;
 }
 
+#stoly {
+	float:left;
+	width:30%;
+	border:1px dotted blue;
+	font-size:20px;
+	padding-bottom:30px;
+}
+
 #name_player {
 	border:1px dotted black;
 	padding:10px;
@@ -58,11 +94,13 @@ img {
 }
 
 #blat {
-	width:200px;
-	height:37.3%;
+	width:90%;
+	height:65%;
 	margin-left:auto;
 	margin-right:auto;
 	/* border: 2px double yellow; */
+	background:#F5F5DC;
+	padding:10px;
 }
 
 #card_blat {
@@ -81,6 +119,9 @@ img {
 #card_mus {
 	float:left;
 	width:10%;
+	margin:5px;
+	margin-top:8px;
+	
 }
 
 #cards {
@@ -88,7 +129,7 @@ img {
 	margin-left:25%;
 }
 
-#licit {
+#user_log {
 	position:absolute;
 	left:90px;
 	top:80px;
@@ -96,20 +137,28 @@ img {
 	border:1px dotted red;
 	height:18%; 
 	width:10%;
+	padding:1%;
 }
 
 #musik {
-	position:absolute;
-	left:90px;
-	top:250px;
-	/* border: 1px dotted red; */
-	height:18%; 
-	width:10%;
-	/* display:none; */
+	float:right;
+	padding:30px;
 }
 
-#licytacja {
+#interaction {
+	float:left;
+	padding:30px;
+	margin:30px;
+}
+
+#licit {
 	border:1px dotted black;
 	color:white;
-	margin:3px;
+	width: 160px;
+	height:160px;
+	margin:3%;
+	background:black;
+	float:left;
+	border-radius: 50%;
+	font-size: 20px;
 }

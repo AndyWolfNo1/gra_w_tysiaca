@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+	<title>Stół do gry: {{table_id}}</title>
+	<link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+{% if 'username' in session: %}
+<div style="margin-top:50px; margin-left:30px;">
+		<li style="font-size:1.2em; color:blue;">{{session['username']}}</li>
+</div>
+<div id="clear"></div>
+{% endif %}
+
+<div id="container">
+
+<div id="licit">
+	<div>
+		<div id="licytacja"><center><b><br>100</b></center></div>
+		<center><img src="../static/image/kier.jpg" style="border-radius: 50%; border: 1px solid blue; padding: 5px; width: 40%; margin:5px; margin-top:10px;"></center>
+	</div>
+</div>
+<div style="float:left; margin:3%; padding:5px; border:2px solid black;">
+	<center><span style="color:black; font-size:1.3em;">Statystyki stołu do gry nr {{table_id}}</span></center>
+	<hr></hr>
+	<span style="color:black; font-size:1.2em;"><b>Autor stołu:<span style="color:blue"> {{author}} </span></b></span>
+	<TABLE style="color:#191970;">
+		<TR><TH WIDTH=120>Gracz</TH><TH WIDTH=120>Punkty</TH></TR>
+
+		<TR> 
+			<TD style="padding-left:17%; background:#87CEFA;">{% for i in table_players: %}
+					{% if i[2] == 1 %}
+					{{ i[1] | capitalize}}
+					{% endif %}
+				{% endfor %}</TD><TD><center>0</center></TD>
+		</TR>
+		<TR> 
+			<TD style="padding-left:17%; background:#7CFC00;">{% for i in table_players: %}
+					{% if i[2] == 2 %}
+					{{ i[1] | capitalize}}
+					{% endif %}
+				{% endfor %}</TD><TD><center>0</center></TD>
+		</TR>
+		<TR> 
+			<TD style="padding-left:17%; background:#87CEFA;">{% for i in table_players: %}
+					{% if i[2] == 3 %}
+					{{ i[1] | capitalize}}
+					{% endif %}
+				{% endfor %}</TD><TD><center>0</center></TD>
+		</TR>
+		<TR> 
+			<TD style="padding-left:17%; background:#7CFC00;">{% for i in table_players: %}
+					{% if i[2] == 4 %}
+					{{ i[1] | capitalize}}
+					{% endif %}
+				{% endfor %}</TD><TD><center>0</center></TD>
+		</TR>
+	</TABLE>
+</div>
+{% if int_chairs != 4: %}
+		{% if 'username' in session: %}
+		<form action="" method="post"> 
+			<div style="float:left; margin:60px; color:black;">
+				krzesło 1<input type="radio" value="1" name="sit_down" {% for i in chairs:%}{% if 1 == i[0]: %}checked disabled checked {% endif %}{% endfor %}><br>
+				krzesło 2<input type="radio" value="2" name="sit_down" {% for i in chairs:%}{% if 2 == i[0]: %}checked disabled checked{% endif %}{% endfor %}><br>
+				krzesło 3<input type="radio" value="3" name="sit_down" {% for i in chairs:%}{% if 3 == i[0]: %}checked disabled checked{% endif %}{% endfor %}><br>
+				krzesło 4<input type="radio" value="4" name="sit_down" {% for i in chairs:%}{% if 4 == i[0]: %}checked disabled checked{% endif %}{% endfor %}><br><br>
+		{% if session['username'] in gracze:%}
+		 Siedzisz
+		{% else %}
+			<button type="submit" style=" font-size:1.2em;">Usiądz</button>
+		{% endif %}
+
+			</div>
+		</form> {% else %} Musisz być zalogowany {% endif %}
+{% endif %}	
+
+	
+<div id="musik">
+	<div>
+		<!-- <div id="card_mus"> -->
+			<!-- <img src="../static/image/tyl.jpg" style="display://none"> -->
+		<!-- </div> -->
+		<!-- <div id="card_mus"> -->
+			<!-- <img src="../static/image/tyl.jpg" style="//display:none"> -->
+		<!-- </div> -->
+		<!-- <div id="card_mus"> -->
+			<!-- <img src="../static/image/tyl.jpg" style="//display:none"> -->
+		<!-- </div> -->
+		<!-- <div id="card_mus"> -->
+			<!-- <img src="../static/image/tyl.jpg" style="//display:none"> -->
+		<!-- </div> -->
+		<div id="clear"></div>
+	</div>
+</center>
+</div>
+
+
+<div id="interaction">
+{% if int_chairs == 4: %}
+	{% if author == session['username'].capitalize(): %}
+			{% if table %}
+				{{table}}
+			{% else %}
+				<form action="" method="post">
+					<button type="submit" name="run_table" value="true" style=" font-size:1.2em;">Start</button>
+				</form>
+			{% endif %}
+	{% endif %}
+{% endif %}
+
+</div>
+<div id="clear"></div>
+<div id="blat">
+	<div class="players" id="chair1">
+	<div style="background:black; color:white; font-size: 18px; padding:5px;">Krzesło 1</div>
+		{% for i in range(5):%}
+			<!-- <div id="card_mus"><img src="../static/image/tyl.jpg"></div> -->
+		{% endfor %}
+		<div id="dane_gracza">
+			<b>Dane gracza</b><br>
+			<p>
+				{% for i in table_players: %}
+					{% if i[2] == 1 %}
+					{{ i[1] | capitalize}}
+					{% endif %}
+				{% endfor %}
+			</p>
+		</div>
+	</div>
+	<div class="players" id="chair2">
+	<div style="background:black; color:white; font-size: 18px; padding:5px;">Krzesło 2</div>
+		{% for i in range(5):%}
+			<!-- <div id="card_mus"><img src="../static/image/tyl.jpg"></div> -->
+		{% endfor %}
+		<div id="dane_gracza">
+			<b>Dane gracza</b><br>
+			<p>
+				{% for i in table_players: %}
+					{% if i[2] == 2 %}
+					{{ i[1] | capitalize }}
+					{% endif %}
+				{% endfor %}
+			</p>
+		</div>
+		
+	</div>
+	<div class="players" id="chair3">
+	<div style="background:black; color:white; font-size: 18px; padding:5px;">Krzesło 3</div>
+		{% for i in range(5):%}
+			<!-- <div id="card_mus"><img src="../static/image/tyl.jpg"></div> -->
+		{% endfor %}
+		<div id="dane_gracza">
+			<b>Dane gracza</b><br>
+			<p>
+				{% for i in table_players: %}
+					{% if i[2] == 3 %}
+					{{ i[1] | capitalize }}
+					{% endif %}
+				{% endfor %}
+			</p>
+		</div>
+	</div>
+	<div class="players" id="chair4">
+	<div style="background:black; color:white; font-size: 18px; padding:5px;">Krzesło 4</div>
+		{% for i in range(5):%}
+			<!-- <div id="card_mus"><img src="../static/image/tyl.jpg"></div> -->
+		{% endfor %}
+		<div id="dane_gracza">
+			<b>Dane gracza</b><br>
+			<p>
+				{% for i in table_players: %}
+					{% if i[2] == 4 %}
+					{{ i[1] | capitalize }}
+					{% endif %}
+				{% endfor %}
+			</p>
+		</div>
+	</div>
+</div>
+<div id="clear"></div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</body>
+</html>

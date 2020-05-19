@@ -4,6 +4,31 @@
 <h1><center> Gra w tysiąca na krzyż </center></h1>
 
 <div id="container">
+	
+	<div style="margin-left:5%;">
+		<div id="stoly">
+			<center><h2 style="color:black; font-size:1.4em; padding:5px; background-color:#A9A9A9;">Aktywne stoły</h2></center>
+			{% for i in tables:%}
+				{% if i[2] == 0:%}
+					<a href="/table/{{i[0]}}" style="padding-left:20px;" target="_blank">#{{i[0]}} &nbsp > &nbsp > &nbsp założył:&nbsp > &nbsp > &nbsp{{i[1]}} &nbsp &nbsp </a><br>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<center><div id="stoly">
+			<h2 style="color:black; font-size:1.4em; padding:5px; background-color:#A9A9A9;">Załóż stół</h2>
+			{% if 'username' in session: %}<form action="" method="post"> 
+			<p><button type="submit" name="add_table" value="true">Dodaj stół</button></p>  
+		</form> {% else %} Musisz być zalogowany {% endif %}
+		</div>
+		<div id="stoly">
+			<h2 style="color:black; font-size:1.4em; padding:5px; background-color:#A9A9A9;">Gracze</h2>
+			{% for i in users%}
+				<p>{{i[1]}}</p>
+			{% endfor %}
+		</div>
+	</div>
+	</center>
 </div>
+
 {% endblock %}
 
