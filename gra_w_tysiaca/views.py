@@ -52,10 +52,19 @@ def table(table_id):
     for i in gracze:
         buff.append(i[1])
     gracze = buff
+##    to_templantes = [table_id,
+##                    chairs,
+##                    gracze,
+##                    author,
+##                    table_players,
+##                    int_chairs,
+##                    gracze_ogolem,
+##                    ]
     
     if request.method == 'POST':
         if request.form["run_table"]:
-            list_playesrs = []
+            list_players = create_players(gracze_ogolem)
+            to_templates.append(list_players)
             return render_template('test2.html', gracze_ogolem=gracze_ogolem)
             
     if request.method == 'POST':
@@ -63,7 +72,7 @@ def table(table_id):
             chair = request.form['sit_down']
             conn = mysql.connect()
             cur = conn.cursor()
-            table_id = table_id
+            to_template.append(table_id)
             to_db = (session['username'], chair, table_id)
             cur.execute("""INSERT INTO `t_p`(`name`, `chair`,`table_ID`) VALUES ( %s , %s, %s)""", to_db )
             conn.commit()
@@ -154,6 +163,7 @@ def logout():
 
 @app.context_processor
 def inject_variables():
+    to_templates = []
     cursor = mysql.connect().cursor()
     cursor.execute("SELECT * from gracze")
     users = cursor.fetchall()

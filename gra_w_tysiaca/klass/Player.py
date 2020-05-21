@@ -23,11 +23,17 @@ class Player:
 
 def create_players(tupla):
     list_players = []
-    print(tupla)
-            
-        #gracz = Player(i[1],i[2])
-        #list_players.append(gracz)
-    #return list_players
+    for i in tupla:
+        gracz = Player(i[1], i[2])
+        list_players.append(gracz)
+    return list_players
+    
 
 gracze_razem = ((1,'buczo',2,11),(2,'lasza',1,11),(4,'polmos',4,11),(5,'sebix',3,11))
 
+def gracze_dict(gr):
+    result_d = {}
+    result_l = []
+    for i in range(4):
+        result_d[gr[i][2]] = gr[i][1]
+    return result_d

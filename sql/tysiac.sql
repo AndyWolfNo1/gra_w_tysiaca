@@ -45,7 +45,7 @@ INSERT INTO `gracze` (`ID`, `login`, `passwd`, `name`, `points`) VALUES
 (2, 'Buczo', 'd2e5ff6d027b9f674391b2a402adb363', 'Tomek', 0),
 (3, 'Polmos', 'd09f49dc98df20ae259d6ecd8a61c4f8', 'Tomek', 0),
 (4, 'Sebix', 'd3e62c6c5e96bdee6f23fdcaa2505527', 'Sebastnian', 0),
-(5, 'Prezes', '5a1a31b0ae38f1e6ed3157931e5609cb', 'pioter', 0);
+(5, 'Prezes', '5a1a31b0ae38f1e6ed3157931e5609cb', 'Pioter', 0);
 
 -- --------------------------------------------------------
 

@@ -108,19 +108,31 @@
 			{% endif %}
 	{% endif %}
 {% endif %}
-
+{% if list_players:%}
+	{{list_players[0].name}}
+{% endif %}
+{{ gracze_ogolem }}
 </div>
 <div id="clear"></div>
 <div id="blat">
 	<div class="players" id="chair1">
 	<div style="background:black; color:white; font-size: 18px; padding:5px;">Krzesło 1</div>
-		{% for i in range(5):%}
-			<!-- <div id="card_mus"><img src="../static/image/tyl.jpg"></div> -->
-		{% endfor %}
+		{% if list_players: %}
+			{% for i in range(4) %}
+				{% if list_players[i] %}
+					{% if name %}
+						{% for j in range(5)%}
+							<!-- <div id="card_mus"><img src="../static/image/tyl.jpg"></div> -->
+							git
+						{% endfor %}
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
 		<div id="dane_gracza">
 			<b>Dane gracza</b><br>
 			<p>
-				{% for i in table_players: %}
+				{% for i in table_players %}
 					{% if i[2] == 1 %}
 					{{ i[1] | capitalize}}
 					{% endif %}
